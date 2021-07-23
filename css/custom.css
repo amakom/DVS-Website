@@ -1,0 +1,239 @@
+/*----------
+font
+------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@400;500;600;700&display=swap');
+
+/*----------
+global style
+------------*/
+:root{
+  --skin-color: #f83f39;
+  --color-1: #eaa023;
+  --color-2: #e91e63;
+  --twitter: #1DA1F2;
+  --telegram: #30A8DC;
+  --starname: #071A40;
+  --dark-700: #2f363e;
+  --white-900: #ffffff;
+  --bg-black-900: #000000;
+  --bg-black-100: #dddddd;
+  --bg-black-50: #eff0f4;
+  --text-black-900: #000000;
+  --text-black-700: #505962;
+  --text-black-600: #666666;
+  --text-black-300: #bbbbbb;
+  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  --outer-shadow-btn: 3px 3px 3px #1DA1F2, -3px -3px 3px #30A8DC;
+  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+  --inner-shadow-btn: inset 1px 1px 2px #d0d0d0, inset -1px -1px 2px #f8f8f8;
+  --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
+}
+
+  body{
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/*----------
+Sign in
+------------*/
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-black-50);
+    overflow: hidden;
+  }
+  .container{
+    border-radius: 10px;
+    box-shadow: var(--outer-shadow);
+    position: absolute;
+    width: 768px;
+    min-height: 480px;
+    overflow: hidden;
+  }
+  form{
+    background: var(--bg-black-50);
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  form input{
+    background: var(--white-900);
+    padding: 16px;
+    margin: 8px 0;
+    width: 85%;
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: var(--inner-shadow);
+  }
+  button{
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 45px;
+    margin: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 80ms ease-in;
+  }
+  .form_btn{
+    box-shadow: var(--outer-shadow);
+  }
+  .form_btn:active{
+    box-shadow: var(--inner-shadow);
+  }
+  .overlay_btn{
+    background-color: var(--twitter);
+    color: var(--white-900);
+    box-shadow: var(--outer-shadow-btn);
+  }
+  .sign-in-container{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transition: all 0.5s;
+  }
+  .sign-up-container{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  .overlay-left{
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    background-color: var(--twitter);
+    color: var(--white-900);
+    transition: all 0.5s;
+  }
+  .overlay-right{
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--twitter);
+    color: var(--white-900);
+    transition: all 0.5s;
+  }
+  .signin-social-links,
+  .signup-social-links{
+    margin: 20px 0;
+  }
+  .signin-social-links div{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    border-radius: 50%;
+    box-shadow: var(--outer-shadow);
+    cursor: pointer;
+  }
+  .signup-social-links div{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    border-radius: 50%;
+    box-shadow: var(--outer-shadow);
+    cursor: pointer;
+  }
+  .signin-social-links div:active{
+    box-shadow: var(--inner-shadow);
+  }
+  .signup-social-links div:active{
+    box-shadow: var(--inner-shadow);
+  }
+  .signin-social-links a{
+    color: var(--text-black-900);
+    font-size: 20px;
+  }
+  .signup-social-links a{
+    color: var(--text-black-900);
+    font-size: 20px;
+  }
+  .signin-social-links a:hover{
+    color: var(--twitter);
+  }
+  .signup-social-links a:hover{
+    color: var(--twitter);
+  }
+  form h1{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+    color: var(--text-black-900);
+  }
+  p{
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+  }
+  .span{
+    font-size: 12px;
+    color: var(--text-black-900);
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  .container.right-panel-active .sign-in-container{
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  .container.right-panel-active .sign-up-container{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 2;
+  }
+  .container.right-panel-active .overlay-left{
+    transform: translateX(-100%);
+    opacity: 1;
+    z-index: 2;
+  }
+  .container.right-panel-active .overlay-right{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  
