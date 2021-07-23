@@ -28,3 +28,4 @@ responsive: [
 // instead of a settings object
 ]
 });
+
