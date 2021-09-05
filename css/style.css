@@ -4,11 +4,14 @@
   /* global style*/
   :root{
     --main-color:#06062B;
-    --twitter:#1DA1F2;
+    --twitter:#7100be;
     --telegram: #30A8DC;
     --starname: #071A40;
     --white-900:#ffffff;
     --white-800:rgba(255,255,255,0.8);
+    --dark-900: #161616;
+    --dark-800: #24292d;
+    --dark-700: #2f363e;
     --shadow:0 0 15px rgba(0,0,0,0.2);
     scroll-behavior: smooth;
   }
@@ -62,7 +65,7 @@
   .btn{
     display: inline-block;
     padding: 10px 30px;
-    border-radius: 5px;
+    border-radius: 0;
     text-transform: capitalize;
     font-weight: 500;
     border: 1px solid transparent;
@@ -72,8 +75,8 @@
     font-family: inherit;
   }
   .btn-1{
-    background-color: var(--white-900);
-    color: var(--main-color);
+    background-color: var(--twitter);
+    color: var(--white-900);
     margin: 2px;
   }
   .btn-1:hover{
@@ -92,7 +95,7 @@
     color: var(--white-900);
   }
   .btn-3{
-    background-color: var(--main-color);
+    background-color: var(--dark-700);
     color: var(--white-900);
     margin: 2px;
   }
@@ -145,7 +148,7 @@
     margin-bottom: 30px !important;
     padding: 0 15px;
     border-radius: 5px;
-    background-color: var(--main-color);
+    background-color: var(--dark-700);
     border: 1px solid transparent;
     font-size: 16px;
     font-family: inherit;
@@ -161,7 +164,7 @@
   }
   /* Header */
   .header{
-    background-color: var(--main-color);
+    background-color: var(--dark-900);
     padding: 10px 0;
     position: fixed;
     left: 0;
@@ -170,14 +173,9 @@
     z-index: 99;
     /*border-bottom: 1px solid var(--white-800);*/
   }
-  .header .logo{
+  .logo{
+    max-width: 150px;
     padding: 0 15px;
-  }
-  .header .logo a{
-    font-size: 24px;
-    color: var(--white-900);
-    text-transform: capitalize;
-    font-weight: 600;
   }
   .header #nav-check{
     position: absolute;
@@ -238,6 +236,7 @@
   }
   .header .nav ul li a{
     font-size: 16px;
+    font-weight: 500;
     color: var(--white-900);
     display: block;
     padding: 10px 0;
@@ -247,10 +246,10 @@
   .header .nav ul li a:hover{
     color: var(--twitter);
   }
-
-  /* home section */ 
+/*==================================================================
+    /* home section */ 
   .home-section{
-    background-color: var(--main-color);
+    background-color: var(--dark-900);
   }
   .home-section .h-100{
     padding: 120px 0;
@@ -261,13 +260,13 @@
     padding: 0 15px;
   }
   .home-text h1{
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 48px;
+    font-weight: 700;
     color: var(--white-900);
     text-transform: capitalize;
     line-height: 1.2;
   }
-  .home-text h2{
+  .home-text h3{
     font-size: 24px;
     font-weight: 300;
     color: var(--white-900);
@@ -275,15 +274,21 @@
 
   }
   .home-img-inner{
-    max-width: 400px;
+    max-width: 800px;
     margin: auto;
   }
-
-  /* why us section */
-  .why-us-section{
+/*==================================================================
+  /* About us section */
+  .about-us-section{
     padding-bottom: 50px;
   }
-  .why-us-item{
+  .about-text p{
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--dark-700);
+    margin: 15px 0 40px;
+  }
+  .about-us-item{
     width: calc((100% / 3) - 30px);
     margin: 0 15px 30px;
     padding: 30px;
@@ -293,53 +298,53 @@
     z-index: 1;
     box-shadow: var(--shadow);
   }
-  .why-us-item::before,
-  .why-us-item::after{
+  .about-us-item::before,
+  .about-us-item::after{
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--main-color);
+    background-color: var(--dark-900);
     z-index: -1;
     transition: all 0.5s ease;
   }
-  .why-us-item:hover::before{
+  .about-us-item:hover::before{
     transform: scale(1,0);
   }
-  .why-us-item:hover::after{
+  .about-us-item:hover::after{
     transform: scale(0,1);
   }
-  .why-us-item:nth-child(1){
-    background-color: var(--telegram);
+  .about-us-item:nth-child(1){
+    background-color: var(--dark-800);
   }
-  .why-us-item:nth-child(2){
-    background-color: var(--telegram);
+  .about-us-item:nth-child(2){
+    background-color: var(--dark-800);
   }
-  .why-us-item:nth-child(3){
-    background-color: var(--telegram);
+  .about-us-item:nth-child(3){
+    background-color: var(--dark-800);
   }
-  .why-us-item .icon{
+  .about-us-item .icon{
     font-size: 30px;
     color: var(--white-900);
     margin: 0 0 10px;
     transition: all 0.5s ease;
   }
-  .why-us-item:hover .icon{
-    color: var(--main-color);
+  .about-us-item:hover .icon{
+    color: var(--white-900);
   }
-  .why-us-item h3{
+  .about-us-item h3{
     color: var(--white-900);
     font-size: 20px;
     font-weight: 500;
     text-transform: capitalize;
     margin: 0 0 10px;
   }
-
-  /* About Us Section*/
-  .about-us-section{
-    background-color: var(--main-color);
+/*==================================================================
+  /* Why Us Section*/
+  .why-us-section{
+    background-color: var(--dark-900);
     padding-bottom: 50px;
   }
   .section-title-1 h2{
@@ -380,10 +385,59 @@
     padding: 0 15px;
   }
   .about-us-img img{
-    max-width: 420px;
+    max-width: 800px;
     width: 100%;
   }
-
+  .counter-section{
+    margin: 5% auto;
+    color: var(--white-900);
+  }
+  .icon-box{
+    border: 1px solid var(--white-900);
+    height: 100px;
+    width: 100px;
+    margin: 20px auto;
+    transform: rotate(45deg);
+  }
+  .icon-box .fas{
+    font-size: 40px;
+    margin: 25px auto;
+    color: var(--white-900);
+    transform: rotate(-45deg);
+  }
+  .counter-box p{
+    font-size: 20px;
+  }
+  .counter-box .counter{
+    font-size: 40px;
+    font-weight: 500;
+}
+/*==================================================================
+  /* Programe Section*/
+  .card-BG {
+    background-color: var(--dark-900);
+  }
+  /*==================================================================
+    /* our instructors section */
+    .our-instructors-section{
+      background-color: var(--dark-900);
+    }
+    .tm {
+      background: var(--white-900);
+      padding: 30px 20px;
+      box-shadow: 5px 5px 10px #333;
+    }
+    
+    .tm i {
+      color: var(--twitter);
+      font-size: 50px;
+      padding: 5px;
+    }
+    
+    .tm i:hover {
+      color: var(--dark-900);
+    }
+/*==================================================================
   /* Sponsors Section*/
   .sponsor-section{
     padding-bottom: 50px;
@@ -393,10 +447,10 @@
     padding: 30px;
     overflow: hidden;
   }
-
+/*==================================================================
   /* contact Section */
   .contact-section{
-    background-color: var(--main-color);
+    background-color: var(--dark-900);
     padding-bottom: 50px;
   }
   .contact-img{
@@ -417,7 +471,7 @@
   .contact-form form{
     width: 100%;
     max-width: 400px;
-    background-color: var(--twitter);
+    background-color: var(--white-900);
     padding: 30px;
     border-radius: 5px;
     box-shadow: var(--shadow);
@@ -432,18 +486,18 @@
     height: 45px;
     width: 100%;
   }
-
+/*==================================================================
   /* Footer Section*/
   .footer{
     padding: 60px 0;
-    color: var(--main-color);
+    color: var(--dark-700);
   }
   .footer-item{
     width: 25%;
     padding: 0 15px;
   }
   .footer-item h2{
-    color: var(--starname);
+    color: var(--twitter);
     font-weight: 500;
     font-size: 18px;
     text-transform: uppercase;
@@ -451,7 +505,7 @@
   }
   .footer-item p{
     font-size: 16px;
-    color: var(--main-color);
+    color: var(--dark-700);
   }
   .footer-about .social-links{
     margin-top: 20px;
@@ -461,15 +515,15 @@
     border: 1px solid transparent;
     height: 35px;
     width: 35px;
-    color: var(--main-color);
+    color: var(--twitter);
     line-height: 35px;
     text-align: center;
-    font-size: 16px;
+    font-size: 24px;
     transition: all 0.5s ease;
     border-radius: 50%;
   }
   .footer-about .social-links a:hover{
-    border-color: var(--main-color);
+    border-color: var(--twitter);
   }
   .footer-quick-links ul li a{
     display: block;
@@ -527,7 +581,7 @@
     .home-text h1{
       font-size: 40px;
     }
-    .home-text h2{
+    .home-text h3{
       font-size: 20px;
     }
     .home-text, .home-img{
@@ -535,6 +589,9 @@
     }
     .home-img{
       margin-top: 60px;
+    }
+    .about-text p{
+      font-size: 20px;
     }
     .why-us-item{
       width: calc(50% - 30px);
@@ -576,8 +633,14 @@
     }
   }
   @media(max-width:575px){
+    .home-text h1{
+      font-size: 28px;
+    }
+    .home-text h3{
+      font-size: 18px;
+    }
     .about-us-text,
-    .why-us-item{
+    .about-us-item{
       width: calc(100% - 30px);
     }
     .footer-item{
