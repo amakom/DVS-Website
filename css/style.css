@@ -9,9 +9,10 @@
     --starname: #071A40;
     --white-900:#ffffff;
     --white-800:rgba(255,255,255,0.8);
-    --dark-900: #161616;
+    --dark-900: #000200;
     --dark-800: #24292d;
     --dark-700: #2f363e;
+    --lighg-grey: #dcdcdc;
     --shadow:0 0 15px rgba(0,0,0,0.2);
     scroll-behavior: smooth;
   }
@@ -75,8 +76,8 @@
     font-family: inherit;
   }
   .btn-1{
-    background-color: var(--twitter);
-    color: var(--white-900);
+    background-color: var(--white-900);
+    color: var(--dark-900);
     margin: 2px;
   }
   .btn-1:hover{
@@ -85,21 +86,32 @@
     color: var(--white-900);
   }
   .btn-2{
-    background-color: var(--white-900);
-    color: var(--main-color);
-    margin: 2px;
-  }
-  .btn-2:hover{
-    background-color: transparent;
-    border-color: var(--white-900);
-    color: var(--white-900);
-  }
-  .btn-3{
     background-color: var(--dark-700);
     color: var(--white-900);
     margin: 2px;
   }
+  .btn-2:hover{
+    background-color: transparent;
+    border-color: var(--dark-800);
+    color: var(--dark-900);
+  }
+  .btn-3{
+    background-color: var(--dark-900);
+    color: var(--white-900);
+    margin: 2px;
+  }
   .btn-3:hover{
+    background-color: transparent;
+    border-color: var(--dark-800);
+    color: var(--dark-900);
+  }
+  .btn-4{
+    background-color: var(--dark-900);
+    color: var(--white-900);
+    margin: 2px;
+    margin-left: 43%;
+  }
+  .btn-4:hover{
     background-color: transparent;
     border-color: var(--main-color);
     color: var(--main-color);
@@ -116,7 +128,7 @@
     text-align: center;
     text-transform: capitalize;
     font-size: 35px;
-    color: var(--main-color);
+    color: var(--dark-900);
     font-weight: 600;
   }
   .section-title h2 span{
@@ -164,7 +176,7 @@
   }
   /* Header */
   .header{
-    background-color: var(--dark-900);
+    background-color: transparent;
     padding: 10px 0;
     position: fixed;
     left: 0;
@@ -172,6 +184,11 @@
     width: 100%;
     z-index: 99;
     /*border-bottom: 1px solid var(--white-800);*/
+  }
+  .scrolling-active{
+    background-color: var(--dark-900);
+    box-shadow: 0 3px 1rem rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
   }
   .logo{
     max-width: 150px;
@@ -246,10 +263,11 @@
   .header .nav ul li a:hover{
     color: var(--twitter);
   }
+  
 /*==================================================================
-    /* home section */ 
+    /* home section */
   .home-section{
-    background-color: var(--dark-900);
+    background-image: url(../images/Star.gif);
   }
   .home-section .h-100{
     padding: 120px 0;
@@ -260,7 +278,7 @@
     padding: 0 15px;
   }
   .home-text h1{
-    font-size: 48px;
+    font-size: 50px;
     font-weight: 700;
     color: var(--white-900);
     text-transform: capitalize;
@@ -274,73 +292,80 @@
 
   }
   .home-img-inner{
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
   }
+
 /*==================================================================
-  /* About us section */
-  .about-us-section{
+  /*--- vision section --*/
+  .vision-section{
+    background-color: var(--lighg-grey);
     padding-bottom: 50px;
   }
-  .about-text p{
+  .vision-text p{
     font-size: 24px;
     font-weight: 300;
     color: var(--dark-700);
     margin: 15px 0 40px;
   }
-  .about-us-item{
-    width: calc((100% / 3) - 30px);
-    margin: 0 15px 30px;
-    padding: 30px;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    box-shadow: var(--shadow);
-  }
-  .about-us-item::before,
-  .about-us-item::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+
+
+/*==================================================================
+  /*--- validators section --*/
+  .validators-section{
     background-color: var(--dark-900);
-    z-index: -1;
-    transition: all 0.5s ease;
+    padding-bottom: 50px;
   }
-  .about-us-item:hover::before{
-    transform: scale(1,0);
-  }
-  .about-us-item:hover::after{
-    transform: scale(0,1);
-  }
-  .about-us-item:nth-child(1){
-    background-color: var(--dark-800);
-  }
-  .about-us-item:nth-child(2){
-    background-color: var(--dark-800);
-  }
-  .about-us-item:nth-child(3){
-    background-color: var(--dark-800);
-  }
-  .about-us-item .icon{
-    font-size: 30px;
-    color: var(--white-900);
-    margin: 0 0 10px;
-    transition: all 0.5s ease;
-  }
-  .about-us-item:hover .icon{
-    color: var(--white-900);
-  }
-  .about-us-item h3{
-    color: var(--white-900);
-    font-size: 20px;
-    font-weight: 500;
+
+  .section-title-1 h2{
+    text-align: center;
     text-transform: capitalize;
-    margin: 0 0 10px;
+    font-size: 35px;
+    color: var(--white-900);
+    font-weight: 600;
   }
+  .validators-text p{
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--white-900);
+    margin: 15px 0 40px;
+  }
+  .val h4{
+    color: var(--white-900);
+  }
+
+/*==================================================================
+    /* school section */
+    .school-section{
+      padding-bottom: 50px;
+      background-color: #dcdcdc;
+    }
+    .school-section .h-100{
+      padding: 120px 0;
+    }
+    .school-text,
+    .school-img{
+      width: 50%;
+      padding: 0 15px;
+    }
+    .school-text h1{
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--dark-800);
+      line-height: 1.2;
+    }
+    .school-text h3{
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--dark-800);
+      margin: 15px 0 40px;
+  
+    }
+    .school-img-inner{
+      max-width: 1000px;
+      margin: auto;
+    }
+  
 /*==================================================================
   /* Why Us Section*/
   .why-us-section{
@@ -367,24 +392,24 @@
     background-color: var(--twitter);
     transform: skewY(-3deg);
   }
-  .about-us-text,
-  .about-us-img{
+  .why-us-text,
+  .why-us-img{
     width: 50%;
     padding: 0 15px;
   }
-  .about-us-text p{
+  .why-us-text p{
     font-size: 16px;
     font-weight: 300;
     color: var(--white-900);
     margin: 15px 0 40px;
   }
-  .about-us-img{
+  .why-us-img{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 15px;
   }
-  .about-us-img img{
+  .why-us-img img{
     max-width: 800px;
     width: 100%;
   }
@@ -413,14 +438,9 @@
     font-weight: 500;
 }
 /*==================================================================
-  /* Programe Section*/
-  .card-BG {
-    background-color: var(--dark-900);
-  }
-  /*==================================================================
     /* our instructors section */
     .our-instructors-section{
-      background-color: var(--dark-900);
+      background-color: var(--lighg-grey);
     }
     .tm {
       background: var(--white-900);
@@ -430,12 +450,44 @@
     
     .tm i {
       color: var(--twitter);
-      font-size: 50px;
+      font-size: 30px;
       padding: 5px;
     }
     
     .tm i:hover {
       color: var(--dark-900);
+    }
+
+/*==================================================================
+    /* foundation section */
+    .foundation-section{
+      padding-bottom: 50px;
+      background-color: var(--dark-900);
+    }
+    .foundation-section .h-100{
+      padding: 120px 0;
+    }
+    .foundation-text,
+    .foundation-img{
+      width: 50%;
+      padding: 0 15px;
+    }
+    .foundation-text h1{
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--white-900);
+      line-height: 1.2;
+    }
+    .foundation-text h3{
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--white-900);
+      margin: 15px 0 40px;
+  
+    }
+    .foundation-img-inner{
+      max-width: 1000px;
+      margin: auto;
     }
 /*==================================================================
   /* Sponsors Section*/
@@ -590,6 +642,30 @@
     .home-img{
       margin-top: 60px;
     }
+    .school-text h1{
+      font-size: 40px;
+    }
+    .school-text h3{
+      font-size: 20px;
+    }
+    .school-text, .school-img{
+      width: 100%;
+    }
+    .school-img{
+      margin-top: 60px;
+    }
+    .foundation-text h1{
+      font-size: 40px;
+    }
+    .foundation-text h3{
+      font-size: 20px;
+    }
+    .foundation-text, .foundation-img{
+      width: 100%;
+    }
+    .foundation-img{
+      margin-top: 60px;
+    }
     .about-text p{
       font-size: 20px;
     }
@@ -605,8 +681,9 @@
   }
   @media(max-width:767px){
     .contact-img, .contact-form,
-    .about-us-img, .about-us-text,
-    .home-text, .home-img{
+    .why-us-img, .why-us-text,
+    .home-text, .home-img,
+    .school-text, .school-img{
       width: 100%;
     }
     .contact-form,
@@ -616,7 +693,20 @@
     .home-text h1{
       font-size: 35px;
     }
-    .home-text h2{
+    .home-text h3{
+      font-size: 18px;
+    }
+    .school-text h1{
+      font-size: 35px;
+    }
+    .school-text h3{
+      font-size: 18px;
+    }
+
+    .foundation-text h1{
+      font-size: 35px;
+    }
+    .foundation-text h3{
       font-size: 18px;
     }
     .section-title h2,
@@ -632,11 +722,24 @@
       align-items: center;
     }
   }
+  
   @media(max-width:575px){
     .home-text h1{
       font-size: 28px;
     }
     .home-text h3{
+      font-size: 18px;
+    }
+    .school-text h1{
+      font-size: 28px;
+    }
+    .school-text h3{
+      font-size: 18px;
+    }
+    .foundation-text h1{
+      font-size: 28px;
+    }
+    .foundation-text h3{
       font-size: 18px;
     }
     .about-us-text,
@@ -648,6 +751,9 @@
     }
     .about-us-text{
       text-align: center;
+    }
+    .btn-4{
+      margin-left: 30%;
     }
   }
 
