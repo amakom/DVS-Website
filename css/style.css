@@ -442,6 +442,9 @@
     .our-instructors-section{
       background-color: var(--lighg-grey);
     }
+    .instructors{
+      color: var(--dark-700);
+    }
     .tm {
       background: var(--white-900);
       padding: 30px 20px;
