@@ -164,7 +164,7 @@
     border: 1px solid transparent;
     font-size: 16px;
     font-family: inherit;
-    color: var(--white-900);
+    color: var(--lighg-grey);
     font-weight: 300;
     transition: all 0.5s ease;
   }
@@ -338,7 +338,7 @@
     /* school section */
     .school-section{
       padding-bottom: 50px;
-      background-color: #dcdcdc;
+      background-color: var(--lighg-grey);
     }
     .school-section .h-100{
       padding: 120px 0;
@@ -492,6 +492,7 @@
 /*==================================================================
   /* Sponsors Section*/
   .sponsor-section{
+    background-color: var(--lighg-grey);
     padding-bottom: 50px;
   }
   .sponsor-section img{
@@ -523,7 +524,7 @@
   .contact-form form{
     width: 100%;
     max-width: 400px;
-    background-color: var(--white-900);
+    background-color: var(--lighg-grey);
     padding: 30px;
     border-radius: 5px;
     box-shadow: var(--shadow);
@@ -541,6 +542,7 @@
 /*==================================================================
   /* Footer Section*/
   .footer{
+    background-color: var(--lighg-grey);
     padding: 60px 0;
     color: var(--dark-700);
   }
