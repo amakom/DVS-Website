@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+
+name: Build and Publish Validators Network Website
+jobs:
+  landing-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.SFTP_DEPLOYMENT_URL }}
+          username: ${{ secrets.SFTP_DEPLOYMENT_LOGIN }}
+          password: ${{ secrets.SFTP_DEPLOYMENT_PASSWORD }}
+          protocol: ftps
+          port: 21
+          server-dir: ./www/
+          exclude: "[**/.git*/**, **/*.md]"
